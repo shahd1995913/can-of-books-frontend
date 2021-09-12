@@ -16,7 +16,7 @@
 *  npm install react-bootstrap@next bootstrap@5.1.0
 ## Architecture
 
-### React APP 
+### React APP with Auth0
 
 
 ## Change Log
@@ -38,3 +38,4 @@ Actual time needed to complete:3 hrs
 ### 1. [Auth0 website](https://auth0.com/docs/libraries/auth0-react)
 ### 2. [Auth0 website 2](https://manage.auth0.com/dashboard/us/dev-vxvbwp7o/applications/kS3h3swBGwkg9mCfUd9WpuqKch6pLRAb/quickstart)
 ### 3. [netlify website](https://app.netlify.com/sites/sharp-davinci-b8c193/overview)
+### 3. [netlify for this App ](https://week3-lab11.netlify.app/)
