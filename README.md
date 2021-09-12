@@ -16,7 +16,7 @@
 *  npm install react-bootstrap@next bootstrap@5.1.0
 ## Architecture
 
-### React APP 
+### React APP with Auth0
 
 
 ## Change Log
