@@ -1,11 +1,26 @@
 # Start your own "Can of Books" App
 
-This repository has starter code to begin work on creating your own online bookshelf.
+# Can of Books
 
-## What can books do?
+**Author**: Shahed Nabeel Alkhateeb
+**Version**: 1.0.0 
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+## Overview
+<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
-## Use this template
+## Getting Started
+* git clone git@github.com:shahd1995913/can-of-books-frontend.git
+* npm i
+* cd can-of-books-frontend/
+*  npm install @auth0/auth0-react
+## Architecture
 
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
+React APP 
+
+
+
+
+## Credit and Collaborations
+1. https://auth0.com/docs/libraries/auth0-react
+2. https://manage.auth0.com/dashboard/us/dev-vxvbwp7o/applications/kS3h3swBGwkg9mCfUd9WpuqKch6pLRAb/quickstart
+3. npm install react-bootstrap@next bootstrap@5.1.0
