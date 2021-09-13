@@ -9,6 +9,7 @@ import Footer from './Footer';
 import { withAuth0 } from '@auth0/auth0-react';
 import BestBooks from "./BestBooks"
 import Login from "./Login"
+
 import Profile from './Profile';
 import {
   BrowserRouter as Router,
@@ -35,12 +36,14 @@ class App extends React.Component {
                 (isAuthontecated ?  <BestBooks/> : <Login/> )
              }
               </Route>
+
+              <Route path="/Profile">
               {/* TODO: add a route with a path of '/profile' that
-               renders a `Profile` component */
+               renders a `Profile` component */}
                <Profile/>
-               // To render The Data
+               {/* // To render The Data */}
                
-               }
+               </Route>
             </Switch>
             <Footer />
           </IsLoadingAndError>
