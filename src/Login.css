@@ -2,3 +2,14 @@
   margin: auto;
   text-align: center;
 }
+
+p{
+
+font-size: x-large;
+font-style:italic;
+font-family: 'Times New Roman', Times, serif;
+color: teal;
+background-color: wheat;
+font-weight: bolder;
+
+}
