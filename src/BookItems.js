@@ -10,7 +10,10 @@ class BookItems extends React.Component {
                 <p> Status :{this.props.item.Status}</p>
                 <p> Email :{this.props.item.email}</p>
                 <p> Description :{this.props.item.Description}</p>
-                <button onClick={() => this.props.deleteBook(this.props.item._id)}>Delete</button>
+                
+    <button onClick={() => this.props.deleteBook(this.props.item._id)}>Delete</button>
+    <button onClick={() => this.props.showUpdateForm(this.props.item)}>Update</button>
+
             </div>
         )
     }

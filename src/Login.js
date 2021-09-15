@@ -1,20 +1,22 @@
 import React from 'react';
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton'
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
+import LoginBtn from './LoginBtn';
 
-import { useAuth0 } from '@auth0/auth0-react';
-
-function LoginButton() {
-  const {
-    isAuthenticated,
-    loginWithRedirect,
-  } = useAuth0();
-
-  return !isAuthenticated && (
-    <Button onClick={loginWithRedirect} variant="warning" size="lg" >Log in</Button>
-  );
+class Login extends React.Component {
+  render() {
+    return(
+      <Card style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Title>Log In</Card.Title>
+          <Card.Text>
+            Click Below to Log In
+          </Card.Text>
+          <LoginButton />
+        </Card.Body>
+      </Card>
+    )
+  }
 }
 
-export default LoginButton;
+export default Login;
