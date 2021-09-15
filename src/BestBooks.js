@@ -41,16 +41,21 @@ class MyFavoriteBooks extends React.Component {
 
   addBook = (event) => {
     event.preventDefault();
+    
     const { user } = this.props.auth0;
     const email = user.email;
     const obj = {
-
+ 
       BookName: event.target.BookName.value,
       Description: event.target.Description.value,
       Status: event.target.Status.value,
-      ownerEmail: email
+      email: email
 
+    
     }
+
+console.log(obj);
+
 
     axios.post(`http://localhost:3010/addBook`, obj).then(result => {
 
