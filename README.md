@@ -3,7 +3,7 @@
 # Can of Books
 
 **Author**: Shahed Nabeel Alkhateeb
-**Version**: 1.0.0 
+**Version**: 2.0.0 
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -43,12 +43,14 @@
 ## Architecture
 
 ### React APP with Auth0
+### for test the front -end side  use npmstart
 
 
 ## Change Log
 
 
 ### 11-09-2021 4:00pm - Application now has a fully-functional express server, with a GET route for the location resource.
+### 14-09-2021 4:00pm - Add and Delete in book page by use rhe POST and DELETE
 
 Name of feature:React app , Auth0 ,withAuth0 ,useAuth0
 
