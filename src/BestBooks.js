@@ -5,7 +5,9 @@ import axios from 'axios';
 import BookItems from './BookItems';
 import UpdateForm from './UpdateForm';
 import './BestBooks.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import css from './Login.css'
+import Button from 'react-bootstrap/Button';
 class MyFavoriteBooks extends React.Component {
 
   constructor(props) {
@@ -13,11 +15,11 @@ class MyFavoriteBooks extends React.Component {
     super(props);
     this.state = {
       FavBookArr: [],
-      showFlag:false,
-BookName:'',
-Description:'' ,
-Status:'',
-bookId:''
+      showFlag: false,
+      BookName: '',
+      Description: '',
+      Status: '',
+      bookId: ''
     }
 
 
@@ -30,8 +32,8 @@ bookId:''
     const email = user.email;
     axios.get(`http://localhost:3010/getBook?email=${email}`).then(result => {
       this.setState({
-         FavBookArr: result.data
-         })
+        FavBookArr: result.data
+      })
 
 
     })
@@ -48,30 +50,31 @@ bookId:''
 
   addBook = (event) => {
     event.preventDefault();
-    
+
     const { user } = this.props.auth0;
     const email = user.email;
     const obj = {
- 
+
       BookName: event.target.BookName.value,
       Description: event.target.Description.value,
       Status: event.target.Status.value,
       email: email
 
-    
+
     }
 
-console.log(obj);
+    console.log(obj);
 
 
     axios.post(`http://localhost:3010/addBook`, obj)
-    .then(result => {
+      .then(result => {
 
-      this.setState({ 
-        FavBookArr: result.data })
+        this.setState({
+          FavBookArr: result.data
+        })
 
 
-    })
+      })
 
       .catch(err => {
 
@@ -111,17 +114,17 @@ console.log(obj);
 
   handleClose = () => {
     this.setState({
-      showFlag : false
+      showFlag: false
     })
   }
 
   showUpdateForm = (item) => {
     this.setState({
       showFlag: true,
-      BookName : item.BookName,
-      Description : item.Description,
-      Status:item.Status,
-      bookId : item._id
+      BookName: item.BookName,
+      Description: item.Description,
+      Status: item.Status,
+      bookId: item._id
 
     })
   }
@@ -131,23 +134,23 @@ console.log(obj);
     const { user } = this.props.auth0;
     const email = user.email;
     const obj = {
-      BookName : event.target.BookName.value,
-      Description : event.target.Description.value,
-      Status : event.target.Status.value,
-      email : email
+      BookName: event.target.BookName.value,
+      Description: event.target.Description.value,
+      Status: event.target.Status.value,
+      email: email
     }
 
     axios
-    .put(`http://localhost:3010/updateBook/${this.state.bookId}`,obj)
-    .then(result =>{
-      this.setState({
-       FavBookArr:result.data,
-        showFlag : false
+      .put(`http://localhost:3010/updateBook/${this.state.bookId}`, obj)
+      .then(result => {
+        this.setState({
+          FavBookArr: result.data,
+          showFlag: false
+        })
       })
-    })
-    .catch(err=>{
-      console.log('error in updating the data');
-    })
+      .catch(err => {
+        console.log('error in updating the data');
+      })
   }
 
 
@@ -177,14 +180,14 @@ console.log(obj);
     return (
       <>
         <h1>My Favorite Books</h1>
-        <form onSubmit={this.addBook }>
+        <form onSubmit={this.addBook}>
           <fieldset>
 
             <legend>Add Book :</legend>
             <input type="text" name="BookName" placeholder="Book Name"></input>
             <input type="text" name="Description" placeholder="Description"></input>
             <input type="text" name="Status" placeholder="Status"></input>
-            <button type="submit">Add</button>
+            <Button variant="success" size="lg" type="submit">Add</Button>
 
 
           </fieldset>
@@ -193,33 +196,33 @@ console.log(obj);
 
 
 
-      </form>
-      { this.state.FavBookArr.map(item => {
+        </form>
+        {/* { this.state.FavBookArr.map(item => {
 
-        return (
-          <BookItems item={item} 
-          
-          deleteBook ={this.deleteBook}
-          showUpdateForm = {this.showUpdateForm}
-          />
+        return ( */}
+        <BookItems item={this.state.FavBookArr}
 
-        )
-      })
-    }
-    {/* <p>
+          deleteBook={this.deleteBook}
+          showUpdateForm={this.showUpdateForm}
+        />
+
+        {/* ) */}
+        {/* }) */}
+        {/* } */}
+        {/* <p>
       This is a collection of my favorite books
     </p> */}
 
-    <UpdateForm  show = {this.state.showFlag}
-    handleClose = {this.handleClose}
-    BookName = {this.state.BookName}
-    Description = {this.state.Description}
-    Status = {this.state.Status}
-    updateBook = {this.updateBook} />
+        <UpdateForm show={this.state.showFlag}
+          handleClose={this.handleClose}
+          BookName={this.state.BookName}
+          Description={this.state.Description}
+          Status={this.state.Status}
+          updateBook={this.updateBook} />
 
 
-  </>
-  )
+      </>
+    )
   }
 }
 

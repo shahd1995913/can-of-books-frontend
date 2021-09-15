@@ -12,7 +12,7 @@ class Login extends React.Component {
           <Card.Text>
             Click Below to Log In
           </Card.Text>
-          <LoginButton />
+          <LoginBtn />
         </Card.Body>
       </Card>
     )

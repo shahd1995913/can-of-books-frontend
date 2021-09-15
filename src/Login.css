@@ -8,8 +8,9 @@ p{
 font-size: x-large;
 font-style:italic;
 font-family: 'Times New Roman', Times, serif;
-color: teal;
-background-color: wheat;
+color:black;
+/* background-color: wheat; */
 font-weight: bolder;
-
+text-decoration: turquoise;
+text-shadow: violet;
 }
