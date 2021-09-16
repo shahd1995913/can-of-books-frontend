@@ -1,28 +1,35 @@
 import React from 'react';
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton'
-import Button from 'react-bootstrap/Button';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
-import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './Footer';
-import { withAuth0 } from '@auth0/auth0-react';
-import BestBooks from "./BestBooks"
-import Login from "./Login"
-
-import Profile from './Profile';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+import { withAuth0 } from '@auth0/auth0-react';
+import BestBooks from './BestBooks';
+// import LoginBtn from "./LoginBtn"
+import Profile from './Profile';
+// import BookItems from './BookItems';
+// import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+// import ToggleButton from 'react-bootstrap/ToggleButton'
+// import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import IsLoadingAndError from './IsLoadingAndError';
+import Login from './Login';
+
+
+
+
+
+
 
 class App extends React.Component {
 
   render() {
     console.log('app', this.props);
-    var  isAuthontecated =this.props.auth0.isAuthenticated;
-
+   // var  isAuthontecated =this.props.auth0.isAuthenticated;
+   const { isAuthenticated } = this.props.auth0;
     return(
       <>
         <Router>
@@ -33,7 +40,7 @@ class App extends React.Component {
               <Route exact path="/">
                 {/* TODO: if the user is logged in, render the `BestBooks` component, 
                 if they are not, render the `Login` component */
-                (isAuthontecated ?  <BestBooks/> : <Login/> )
+                (isAuthenticated ?  <BestBooks/> : <Login/> )
              }
               </Route>
 
