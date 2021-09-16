@@ -6,8 +6,7 @@ import BookItems from './BookItems';
 
 import './BestBooks.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import css from './Login.css'
-// import Button from 'react-bootstrap/Button';
+
 
 
 class MyFavoriteBooks extends React.Component {
