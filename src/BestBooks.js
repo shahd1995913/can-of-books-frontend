@@ -200,11 +200,15 @@ class MyFavoriteBooks extends React.Component {
         {/* { this.state.FavBookArr.map(item => {
 
         return ( */}
+        { this.state.FavBookArr.length > 0 &&   
+        
         <BookItems item={this.state.FavBookArr}
 
-          deleteBook={this.deleteBook}
-          showUpdateForm={this.showUpdateForm}
-        />
+        deleteBook={this.deleteBook}
+        showUpdateForm={this.showUpdateForm}
+      />
+        }
+       
 
         {/* ) */}
         {/* }) */}
