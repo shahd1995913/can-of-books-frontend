@@ -6,7 +6,7 @@ import BookItems from './BookItems';
 import UpdateForm from './UpdateForm';
 import './BestBooks.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import css from './Login.css'
+// import css from './Login.css'
 import Button from 'react-bootstrap/Button';
 class MyFavoriteBooks extends React.Component {
 
@@ -41,7 +41,7 @@ class MyFavoriteBooks extends React.Component {
       .catch(err => {
 
 
-        console.log(err + 'Error');
+        console.log('Error');
 
       })
 
