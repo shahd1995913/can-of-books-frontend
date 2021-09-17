@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import css from './Login.css'
+// import css from './Login.css'
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel'
 
